@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#===========#
+#   MySQL   #
+#===========#
+export DB_HOST=${DB_HOST:-127.0.0.1}
+export DB_PORT=${DB_PORT:-3306}
+export DB_NAME=${DB_NAME:-yearning}
+export DB_USER=${DB_USER:-root}
+export DB_PASSWORD=${DB_PASSWORD:-pass4Yearn1ng}
+export IS_DOCKER=is_docker
+SecretKey=$(pwgen -ac 16 1) && export SecretKey

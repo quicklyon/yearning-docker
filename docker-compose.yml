@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+  xmysql:
+    image: bitnami/mysql:5.7
+    container_name: xmysql
+    ports:
+      - '3307:3306'
+    volumes:
+      - 'db:/bitnami/mysql/data'
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass4Yearn1ng
+      - MYSQL_DATABASE=yearning
+      - MYSQL_CHARACTER_SET=utf8mb4
+      - MYSQL_COLLATE=utf8mb4_general_ci
+    networks:
+      - net
+
+  yearning:
+    image: hub.qucheng.com/app/yearning:${TAG:-latest}
+    container_name: yearning
+    ports:
+      - '8000:8000'
+    volumes:
+      - 'data:/data'
+    depends_on:
+      - xmysql
+    environment:
+      - DB_HOST=xmysql
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=pass4Yearn1ng
+      - DB_NAME=yearning
+      - DEBUG=1
+      - IS_CONTAINER=true
+    networks:
+      - net
+
+networks:
+  net:
+    driver: bridge
+
+# persistence
+volumes:
+  db:
+    driver: local
+  data:
+    driver: local
