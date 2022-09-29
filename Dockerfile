@@ -1,6 +1,6 @@
 FROM easysoft/debian:11 as builder
 
-ARG VERSION=v3.1.0
+ARG VERSION=v3.1.1
 
 ARG YEARNING_URL=https://github.com/cookieY/Yearning/releases/download/${VERSION}/Yearning-${VERSION}-linux-amd64.zip
 
@@ -24,7 +24,7 @@ ENV TZ=Asia/Shanghai \
 ARG IS_CHINA="true"
 ENV MIRROR=${IS_CHINA}
 
-ARG VERSION=v3.1.0
+ARG VERSION=v3.1.1
 ENV YEARNING_VERSION=${VERSION}
 ENV EASYSOFT_APP_NAME="Yearning $YEARNING_VERSION"
 # ENV DEBUG=true

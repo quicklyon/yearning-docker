@@ -1,0 +1,2 @@
+- [latest](https://github.com/cookieY/Yearning/releases/tag/v3.1.1)
+- [3.1.0](https://github.com/cookieY/Yearning/releases/tag/v3.1.0)

@@ -58,6 +58,7 @@ Yearning官网：[http://next.yearning.io](http://next.yearning.io)
 
 - [`latest`](https://github.com/cookieY/Yearning/releases)
 - [3.1.0](https://github.com/cookieY/Yearning/releases/tag/v3.1.0)
+- [3.1.1](https://github.com/cookieY/Yearning/releases/tag/v3.1.1)
 
 ## 三、获取镜像
 
